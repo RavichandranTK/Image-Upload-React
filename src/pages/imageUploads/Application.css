@@ -1,0 +1,106 @@
+.image-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.image-preview > img {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  max-height: 1000px;
+  margin: 40px auto;
+  object-fit: contain;
+}
+
+.image-table {
+  margin: 40px auto;
+}
+
+.image-upload-context {
+  margin: 40px auto;
+}
+
+.add-btn {
+  margin: 30px auto;
+}
+
+.action-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.action-btn-container {
+  width: 600px;
+}
+
+.action-btn-container > button {
+  margin: 5px;
+}
+
+input,
+button {
+  cursor: pointer;
+}
+
+table {
+  border-color: black !important;
+}
+
+.action-btn {
+  width: 140px;
+}
+
+thead {
+  background-color: #e7d8d8;
+}
+
+th,
+td {
+  text-align: center !important;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-title {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    text-transform: capitalize;
+  }
+}
+
+.img-title > h1 {
+  text-transform: capitalize;
+}
+
+a:hover {
+  text-transform: capitalize;
+  background-color: #fff;
+}
+
+img {
+  width: 100%;
+  height: 100%; 
+  max-width: 1000px;
+  max-height: 1000px;
+}
+
+.no-data-found {
+  color: red;
+  text-align: center;
+}
+
+.img-view-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}

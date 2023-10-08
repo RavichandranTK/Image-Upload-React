@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import ImageLanding from "./pages/imageUploads/ImageLanding";
+import ImageView from "./pages/imageUploads/ImageView";
 
 function App() {
+  const RouteConfig = [
+    {
+      name: "/",
+      path: "/",
+      element: <ImageLanding />,
+      exact: true,
+    },
+    {
+      name: "image-view",
+      path: "/image/:id",
+      element: <ImageView />,
+      exact: true,
+    },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        {RouteConfig.map(({ name, path, exact, element }) => (
+          <Route key={name} path={path} exact={exact} element={element} />
+        ))}
+
+        <Route path="*" exact element={<ImageLanding />} />
+      </Routes>
     </div>
   );
 }
